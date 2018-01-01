@@ -21,6 +21,10 @@ void enqueue(int x)
 
 int dequeue()
 {
+	if (hp == tp)
+	{
+		return 0;
+	}
 	int ret = Q[hp++];
 	hp %= QUEUE_SIZE;
 	
